@@ -1,5 +1,31 @@
 .Ui_background {
   height: 100%;
-  /* background: var(--gradient-dark); */
+  background: var(--gradient-dark);
   padding: 2rem 5rem;
+}
+
+.Ui_background.active {
+  height: 100%;
+  background: var(--gradient-light);
+  padding: 2rem 5rem;
+}
+
+
+
+@media screen and (max-width:900px) {
+ .Ui_background{
+  padding: 1rem 3rem;
+ }
+ .Ui_background.active{
+  padding: 1rem 3rem;
+ }
+}
+
+@media screen and (max-width:375px) {
+ .Ui_background{
+  padding: 0.5rem 1.5rem;
+ }
+  .Ui_background.active{
+  padding: 0.5rem 1.5rem;
+ }
 }

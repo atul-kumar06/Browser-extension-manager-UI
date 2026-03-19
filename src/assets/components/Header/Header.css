@@ -1,9 +1,71 @@
-.header_ui{
+/* --- Base Styles (Mobile First / Default) --- */
+.header_ui {
     display: flex;
-    border: 2px solid black;
     justify-content: space-between;
     align-items: center;
+    background-color: var(--color-neutral-800);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    transition: background-color 0.3s ease; /* Smooth theme transition */
+    /* box-shadow: 
+        0 4px 15px rgba(0, 0, 0, 0.05), 
+        0 2px 5px rgba(0, 0, 0, 0.03); */
 }
-.header_ui_logo img{
-   
+
+/* Only change the background color for active state */
+.header_ui.active {
+    background-color: var(--color-neutral-0);
+    border: 2px solid var(--color-neutral-200);
+    /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); */
+}
+
+.header_ui_button {
+    padding: 0.8rem;
+    background: var(--color-neutral-700);
+    outline: none;
+    border: none;
+    border-radius: 0.7rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.header_ui_button.active {
+    background: var(--color-neutral-100);
+}
+
+/* --- SVG Logo Styling --- */
+.my-custom-logo {
+    max-width: 150px; /* Give it a fixed max-width so it doesn't explode */
+    height: auto;
+}
+
+.header_ui.active .my-custom-logo path:nth-child(2) {
+    fill: black; 
+}
+
+/* --- Responsive Media Queries --- */
+
+@media screen and (max-width: 900px) {
+    .header_ui {
+        padding: 0.8rem;
+        gap: 10px;
+    }
+    .header_ui_button {
+        padding: 0.6rem;
+    }
+    .my-custom-logo {
+        max-width: 120px; /* Scale logo down slightly */
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .header_ui {
+        padding: 0.5rem;
+    }
+    .header_ui_button {
+        padding: 0.4rem;
+    }
+    .my-custom-logo {
+        max-width: 100px;
+    }
 }

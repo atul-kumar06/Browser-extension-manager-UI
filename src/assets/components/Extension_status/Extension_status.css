@@ -1,0 +1,111 @@
+.extension_ui {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block: 2rem;
+}
+
+.extension_ui_heading h1 {
+    color: white;
+}
+.extension_ui_heading.active h1 {
+    color: black;
+}
+
+.btn-all,
+.btn-active,
+.btn-inactive {
+    border-radius: 30px;
+    width: 5rem;
+    height: 2.7rem;
+    background: var(--color-neutral-700);
+    border: 2px solid var(--color-neutral-600);
+    color: white;
+    font-size: 1rem;
+}
+
+.btn-all.active,
+.btn-active.active,
+.btn-inactive.active {
+    color: black;
+    border: 2px solid var(--color-neutral-200);
+    background: var(--color-neutral-0);
+
+}
+
+.extension_ui_button {
+    display: flex;
+    justify-content: space-between;
+    width: 19rem;
+}
+
+@media screen and (max-width:700px) {
+    .extension_ui {
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+
+    .extension_ui_heading h1 {
+        font-size: 3rem;
+    }
+
+    .extension_ui_button {
+        width: 22rem;
+    }
+
+    .btn-all,
+    .btn-active,
+    .btn-inactive {
+        width: 6rem;
+        height: 2.7rem;
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .extension_ui {
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+
+    .extension_ui_heading h1 {
+        font-size: 2rem;
+    }
+
+    .extension_ui_button {
+        width: 18rem;
+    }
+
+    .btn-all,
+    .btn-active,
+    .btn-inactive {
+        width: 5rem;
+        height: 2.7rem;
+        font-size: 1rem;
+        font-weight: 500
+    }
+}
+
+@media screen and (max-width:375px) {
+    .extension_ui {
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+
+    .extension_ui h1 {
+        font-size: 1.5rem;
+    }
+
+    .extension_ui_button {
+        width: 14rem;
+    }
+
+    .btn-all,
+    .btn-active,
+    .btn-inactive {
+        width: 4rem;
+        height: 2.7rem;
+        font-size: 0.8rem;
+        
+    }
+}
