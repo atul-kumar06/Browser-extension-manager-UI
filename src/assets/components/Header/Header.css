@@ -1,0 +1,9 @@
+.header_ui{
+    display: flex;
+    border: 2px solid black;
+    justify-content: space-between;
+    align-items: center;
+}
+.header_ui_logo img{
+   
+}
