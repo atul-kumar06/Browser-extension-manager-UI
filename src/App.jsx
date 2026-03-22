@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Header from "./assets/components/Header/Header";
 import './App.css'
 import Extension_status from "./assets/components/Extension_status/Extension_status";
+import Extension_list from "./assets/components/Extension_list/Extension_list";
+
 const App = () => {
   const [background, setbackground] = useState(false)
   function changebackground(){
@@ -12,6 +14,7 @@ const App = () => {
     
       <Header  onclick={changebackground}/>
       <Extension_status background={background}/>
+      <Extension_list background={background}/>
     </div>
   );
 };

@@ -1,0 +1,158 @@
+/* --- Variables & Theme --- */
+:root {
+  --radius-lg: 20px;
+  --radius-md: 1rem;
+  --transition-speed: 0.3s ease;
+  
+  /* Toggle Specific */
+  --toggle-width: 44px;
+  --toggle-height: 24px;
+  --toggle-handle-size: 18px;
+  --toggle-padding: 3px;
+}
+
+/* --- Main Card Container --- */
+.extension-card {
+  border: 2px solid var(--color-neutral-600);
+  max-width: 22rem;
+  height: 200px;
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  background-color: var(--color-neutral-800);
+  transition: all var(--transition-speed);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Light Mode Modifier */
+.extension-card.active {
+  background-color: var(--color-neutral-0);
+  border-color: var(--color-neutral-200);
+}
+
+/* --- Card Header Section --- */
+.extension-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.extension-card__logo {
+  width: 48px; /* Fixed size for consistency */
+  height: 48px;
+  object-fit: contain;
+}
+
+.extension-card__title-group h1 {
+  color: var(--color-neutral-100);
+  font-size: 1.125rem;
+  line-height: 1.4;
+  margin: 0 0 0.25rem 0;
+}
+
+.extension-card.active .extension-card__title-group h1 {
+  color: var(--color-neutral-800);
+}
+
+.extension-card__description {
+  color: var(--color-neutral-300);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.extension-card.active .extension-card__description {
+  color: var(--color-neutral-600);
+}
+
+/* --- Card Footer/Actions --- */
+.extension-card__actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto; /* Pushes actions to the bottom */
+}
+
+.btn-action {
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius-md);
+  background: var(--color-neutral-800);
+  color: var(--color-neutral-100);
+  border: 2px solid var(--color-neutral-600);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-speed);
+}
+
+.extension-card.active .btn-action {
+  background-color: var(--color-neutral-0);
+  color: var(--color-neutral-800);
+  border-color: var(--color-neutral-200);
+}
+
+.btn-action:hover {
+  opacity: 0.8;
+}
+
+/* Container */
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+}
+
+/* Hide default checkbox */
+.toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Slider background */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: var(--color-neutral-600);
+  border-radius: 30px;
+  transition: 0.3s;
+}
+.slider.active{
+  background: var(--color-neutral-300);
+}
+
+/* Circle knob */
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  left: 3px;
+  top: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+/* Checked state */
+.toggle input:checked + .slider {
+  background-color: rgb(193, 0, 0);
+}
+
+.toggle input:checked + .slider::before {
+  transform: translateX(30px);
+}
+
+@media screen and (max-width:1250px) {
+  .extension-card{
+    width: 20rem;
+  }
+}
+@media screen and (max-width:1180px) {
+  .extension-card{
+    width: 18rem;
+  }
+}
