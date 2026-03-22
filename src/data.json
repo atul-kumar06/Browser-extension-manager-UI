@@ -38,7 +38,7 @@
     {
         "logo": "logoMarkupNotes",
         "name": "Markup Notes",
-        "description": "Enables annotation and notes directly onto webpages for collaborative debugging.",
+        "description": "Enables annotation and notes.",
         "isActive": true
     },
     {

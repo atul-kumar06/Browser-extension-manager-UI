@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import * as images from "../../images/index.js";
 import "./Extensioncard.css";
 
-const ExtensionCard = ({ item, background, onToggle }) => {
+const ExtensionCard = ({ item, background, removebtn, togglebtn }) => {
+  console.log(togglebtn);
   return (
     <div className={`extension-card ${background ? "active" : ""}`}>
       <div className="extension-card__header">
@@ -19,16 +20,16 @@ const ExtensionCard = ({ item, background, onToggle }) => {
           <p className="extension-card__description noto-sans-noto-regular">
             {item.description}
           </p>
-        </div>
+        </div>  
       </div>
 
       <div className="extension-card__actions">
         {/* The Action Button */}
-        <button className="btn-action" onClick={onToggle}>
-          {item.isActive ? "Remove" : "Add"}
+        <button className="btn-action" onClick={removebtn} >
+          Remove
         </button>
         <label className="toggle">
-          <input type="checkbox" />
+          <input type="checkbox" onClick={togglebtn} onChange={(e) => console.log(e.target.checked)}/>
           <span className={`slider ${background ? "active" : ""}`}></span>
         </label>
       </div>
@@ -37,3 +38,4 @@ const ExtensionCard = ({ item, background, onToggle }) => {
 };
 
 export default ExtensionCard;
+

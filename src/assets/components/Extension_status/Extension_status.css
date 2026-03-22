@@ -8,6 +8,7 @@
 .extension_ui_heading h1 {
     color: white;
 }
+
 .extension_ui_heading.active h1 {
     color: black;
 }
@@ -22,7 +23,23 @@
     border: 2px solid var(--color-neutral-600);
     color: white;
     font-size: 1rem;
+    transition: all 0.25s ease;
 }
+
+.btn-active:hover,
+.btn-inactive:hover,
+.btn-all:hover {
+    background: rgb(220, 0, 0);
+    transform: translateY(-2px);
+    /* box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); */
+}
+.btn-active:active,
+.btn-inactive:active,
+.btn-all:active {
+  transform: scale(0.96);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
 
 .btn-all.active,
 .btn-active.active,
@@ -30,7 +47,6 @@
     color: black;
     border: 2px solid var(--color-neutral-200);
     background: var(--color-neutral-0);
-
 }
 
 .extension_ui_button {
@@ -39,7 +55,7 @@
     width: 19rem;
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width: 700px) {
     .extension_ui {
         flex-direction: column;
         row-gap: 1rem;
@@ -63,7 +79,7 @@
     }
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width: 500px) {
     .extension_ui {
         flex-direction: column;
         row-gap: 1rem;
@@ -83,11 +99,11 @@
         width: 5rem;
         height: 2.7rem;
         font-size: 1rem;
-        font-weight: 500
+        font-weight: 500;
     }
 }
 
-@media screen and (max-width:375px) {
+@media screen and (max-width: 375px) {
     .extension_ui {
         flex-direction: column;
         row-gap: 1rem;
@@ -103,6 +119,5 @@
         width: 4rem;
         height: 2.7rem;
         font-size: 0.8rem;
-        
     }
 }

@@ -83,9 +83,19 @@
   border: 2px solid var(--color-neutral-600);
   font-weight: 600;
   cursor: pointer;
-  transition: all var(--transition-speed);
+  transition: all 0.25s ease var(--transition-speed) ;
+  
 }
-
+.btn-action:hover{
+   transform: translateY(-2px);
+   background-color: red;
+   outline: none;
+   border: none;
+   color: white;
+}
+.btn-action:active{
+  transform: scale(0.95);
+}
 .extension-card.active .btn-action {
   background-color: var(--color-neutral-0);
   color: var(--color-neutral-800);

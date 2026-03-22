@@ -1,6 +1,7 @@
 .Ui_background {
   background: var(--gradient-dark);
   padding: 2rem 5rem;
+  min-height: 100vh;
 }
 
 .Ui_background.active {
